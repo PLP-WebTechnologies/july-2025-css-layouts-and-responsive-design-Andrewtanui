@@ -1,0 +1,116 @@
+/* style.css - Responsive CSS Layout Assignment */
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+.header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.navbar {
+  background: #1abc9c;
+}
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.sidebar {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+}
+.content {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+}
+.card-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+.card {
+  background: #e3eafc;
+  border-radius: 6px;
+  padding: 1rem;
+  flex: 1 1 200px;
+  min-width: 180px;
+  box-shadow: 0 1px 4px rgba(44,62,80,0.08);
+  text-align: center;
+}
+.footer {
+  background: #2d3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    margin-bottom: 2rem;
+  }
+  .card-container {
+    gap: 1rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .header {
+    padding: 1rem 0.5rem;
+    font-size: 1.2rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+  .main-grid {
+    padding: 0 0.5rem;
+  }
+  .sidebar, .content {
+    padding: 1rem;
+  }
+  .card-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Helpful comments for maintainability */
+/*
+- .main-grid uses CSS Grid for 2D layout
+- .card-container uses Flexbox for 1D layout
+- Media queries adjust layout for tablet and mobile
+*/
